@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendMart | Accessories Collection</title>
+    <!-- حماية الصفحة بالجافا سكريبت من التصفح دون تسجيل دخول -->
+    <script src="js/auth-check.js"></script>
+    <!-- ربط ملف الـ CSS الموحد وملف الأيقونات المعتمد -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <header class="navbar">
+    <div class="logo">
+        <a href="index.html" style="text-decoration: none; color: #4338ca;"><i class="fa fa-shopping-bag"></i> TrendMart</a>
+    </div>
+    
+   <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="women.html">Women</a>
+    <a href="men.html">Men</a>
+    <a href="sunglasses.html">Sunglasses</a>
+    <a href="perfumes.html">Perfumes</a>
+    <a href="accessories.html">Accessories</a>
+    <a href="bags.html">Bags</a> 
+</nav>
+
+
+    <div class="auth-buttons">
+        <a href="cart.html" class="btn-login" style="position: relative; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fa fa-shopping-cart"></i> Cart 
+            <span id="cartCount" style="background-color: #ef4444; color: white; padding: 2px 7px; border-radius: 50%; font-size: 0.75rem; font-weight: 700; position: absolute; top: -12px; right: -8px; box-shadow: 0 2px 5px rgba(239, 68, 68, 0.3);">0</span>
+        </a>
+    </div>
+</header>
+
+    <main class="products-page-container">
+        <div class="page-title">
+            <h2>Finest Accessories Hub</h2>
+            <p>Elevate your outfit with 20 premium minimalist necklaces, bracelets, elegant rings, and luxury daily items.</p>
+        </div>
+
+        <div id="accessoriesProductsContainer" class="products-grid"></div>
+    </main>
+
+    <script src="java/products.js"></script>
+</body>
+</html>

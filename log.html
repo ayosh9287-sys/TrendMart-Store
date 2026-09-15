@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendMart | Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body style="background: linear-gradient(135deg, #f5f3ff 0%, #e0e7ff 100%); min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px;">
+
+    <div class="blocker-box" style="width: 100%; max-width: 400px; text-align: left;">
+        <h2 style="color: #4338ca; margin-bottom: 5px;">
+            <i class="fa-solid fa-bag-shopping"></i> TrendMart
+        </h2>
+        <p style="margin-bottom: 20px; font-size: 0.9rem; color: #6b7280;">
+            Welcome back! Please enter your details to login.
+        </p>
+        
+        <form id="loginForm">
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.85rem; color: #4b5563;">First Name</label>
+                <input type="text" id="logName" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem;">
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.85rem; color: #4b5563;">Password</label>
+                <input type="password" id="logPassword" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem;">
+            </div>
+            
+            <button type="submit" class="btn-signup" style="width: 100%; padding: 12px; border-radius: 6px; font-size: 1rem; border: none; cursor: pointer;">
+                Sign In
+            </button>
+        </form>
+
+        <p style="margin-top: 20px; font-size: 0.85rem; text-align: center; color: #6b7280;">
+            Don't have an account? <a href="sign.html" style="color: #6366f1; font-weight: 600; text-decoration: none;">Sign up for free</a>
+        </p>
+    </div>
+
+    <script src="java/log.js"></script>
+</body>
+</html>

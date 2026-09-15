@@ -1,0 +1,1631 @@
+/* Google Fonts for English styling */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fbfbfe;
+    color: #1e1b4b;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4338ca;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #6366f1;
+}
+
+/* Auth Buttons */
+.auth-buttons a,
+.btn-logout {
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-login {
+    color: #6366f1;
+    border: 1px solid #6366f1;
+}
+
+.btn-login:hover {
+    background-color: #f5f3ff;
+}
+
+.btn-signup,
+.btn-signup-blocker {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+}
+
+.btn-signup:hover,
+.btn-signup-blocker:hover {
+    background-color: #4338ca;
+}
+
+.btn-logout {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+}
+
+#usernameDisplay {
+    font-weight: 600;
+    color: #4b5563;
+    margin-right: 10px;
+}
+
+/* Hero Section Styling */
+/* ==================== IMPROVED HERO SECTION ==================== */
+/* ==================== PREMIUM & CLEAN HERO SECTION ==================== */
+/* الحاوية الرئيسية: تم تعديل الألوان لتتناسب بدقة مع تدرجات الصورة (البنفسجي البارد والوردي الناعم) */
+/* الحاوية الرئيسية: تم تحويل التدرج اللوني إلى درجات الأبيض النقي، الأزرق السماوي الناعم، ولمسة دافئة تتناسب مع القبعة والصيف */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 8% 60px 8%;
+    min-height: 85vh;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 50%, #fefcf3 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* إضافة لمسة إضاءة دائرية ناعمة جداً تبرز حركة الموديلز */
+.hero-container::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.06) 0%, transparent 70%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* جانب النصوص: منسق بشكل فخم وبعيد عن تفاصيل الشنطة والموديل */
+.hero-content {
+    flex: 1;
+    max-width: 40%;
+    z-index: 5;
+    position: relative;
+}
+
+/* الـ Badge: تم تعديل ألوانه ليعطي طابعاً صيفياً حيوياً وراقياً */
+.badge {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* العنوان الرئيسي: لون كحلي داكن وراقي جداً مستوحى من لون حقيبة السفر والجينز */
+.hero-content h1 {
+    font-size: 3.8rem;
+    color: #0f172a;
+    /* لون داكن ملكي يمنح فخامة فورية للنصوص */
+    line-height: 1.25;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+/* النصوص الفرعية */
+.hero-content p {
+    color: #475569;
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+/* زر الشراء: لون أزرق غني وراقي يتماشى مع جينز الموديل مع ظل ناعم */
+.btn-explore {
+    display: inline-block;
+    background-color: #0ea5e9;
+    /* أزرق حيوي جذاب يشد عين المشتري */
+    color: white;
+    text-decoration: none;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.25);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-explore:hover {
+    background-color: #0284c7;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(14, 165, 233, 0.35);
+}
+
+/* المميزات الفاخرة أسفل النص */
+.hero-features {
+    display: flex;
+    gap: 30px;
+    margin-top: 60px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 25px;
+}
+
+.feature-item {
+    font-size: 0.9rem;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.feature-item i {
+    color: #0ea5e9;
+}
+
+/* حاوية الصورة: مهيأة لتكبير الموديلز وإبراز تفاصيل حركتهم */
+.hero-images {
+    flex: 1.5;
+    width: 60%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    /* دفع الموديلز لليمين ليتناسق اتجاه نظرهم وإشارتهم */
+    align-items: center;
+    height: 650px;
+    z-index: 2;
+}
+
+/* الصورة الشفافة الجديدة بحجم فخم وتأثير ظل يدمج أقدامهم بالخلفية */
+.main-img {
+    width: 100%;
+    max-width: 1000px;
+    /* حجم ضخم ومميز جداً في القسم */
+    height: auto;
+    max-height: 700px;
+    object-fit: contain;
+
+    /* الـ drop-shadow يلتف حول أجساد الموديلز وحقيبة السفر بدقة متناهية دون أي خطوط حادة */
+    filter: drop-shadow(10px 25px 35px rgba(15, 23, 42, 0.08)) drop-shadow(-5px 10px 15px rgba(14, 165, 233, 0.04));
+
+    /* حركت طفو خفيفة تعطي حياة وروح للصورة المفرغة */
+    animation: float-subtle 6s ease-in-out infinite;
+}
+
+
+
+
+
+/* حركة طفو هادئة جداً للمواقع الفخمة */
+@keyframes float-subtle {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* التجاوب مع شاشات الموبايل والتابلت */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 140px;
+        gap: 30px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-images {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .hero-images::before {
+        background: linear-gradient(to top, #e0e7ff 0%, transparent 100%);
+        width: 100%;
+        height: 30%;
+        bottom: 0;
+        top: auto;
+    }
+
+    .hero-features {
+        justify-content: center;
+    }
+}
+
+
+
+
+/* Blocker Screen CSS */
+.blocker-screen {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.blocker-box {
+    text-align: center;
+    max-width: 500px;
+    padding: 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.blocker-box h2 {
+    margin-bottom: 10px;
+    color: #1e1b4b;
+}
+
+.blocker-box p {
+    margin-bottom: 25px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.blocker-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-signup-blocker {
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Helper classes */
+.hidden {
+    display: none !important;
+}
+
+.blur-content {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+/* ............................. */
+/* Floating Features Section Styling */
+.floating-features-container {
+    max-width: 84%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.features-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    /* السر في تأثير الطفو هو إعطاء margin علوي بالسالب لسحب الصندوق لأعلى */
+    margin-top: -50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.feat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    justify-content: center;
+}
+
+/* إضافة خط فاصل عمودي بين الميزات تماماً كالصورة ما عدا الأخيرة */
+.feat-card:not(:last-child) {
+    border-right: 1px solid #e2e8f0;
+    padding-right: 20px;
+}
+
+.feat-icon i {
+    font-size: 1.8rem;
+    color: #4338ca;
+    /* اللون البنفسجي الجميل للأيقونات */
+}
+
+.feat-text h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e1b4b;
+    margin-bottom: 2px;
+}
+
+.feat-text p {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* لجعل القسم متجاوباً مع الشاشات الصغيرة والهواتف */
+@media (max-width: 968px) {
+    .features-wrapper {
+        flex-direction: column;
+        gap: 25px;
+        margin-top: -20px;
+        text-align: center;
+    }
+
+    .feat-card {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .feat-card:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        padding-right: 0;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+}
+
+/* تلوين كلمة Save More باللون البنفسجي الجذاب للمتجر */
+.highlight-text {
+    color: #6366f1;
+}
+
+/* تنسيقات الوصف الخاص بالمنتج */
+.prod-description {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    height: 36px;
+    /* يضمن عرض سطرين فقط لتناسق شكل الكروت */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+/* تعديل حجم كارد المنتج ليتناسب مع البيانات الإضافية */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ==================== CATEGORIES SECTION STYLING ==================== */
+.categories-section {
+    padding: 80px 8% 80px 8%;
+    background-color: #fbfbfe;
+}
+
+/* Heading of the Section */
+.sec-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sec-heading h2 {
+    font-size: 2.2rem;
+    color: #1e1b4b;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sec-heading p {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+/* Layout for the 6 Circular Cards */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* 6 pillars layout */
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Individual Card Container */
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Perfect Circular Image Wrapper */
+.cat-circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    /* Makes it 100% a circle */
+    overflow: hidden;
+    /* Clips any sharp edges of the inner image */
+    background-color: #e0e7ff;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: auto;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Image behavior inside the circle */
+.cat-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Keeps image aspect ratio intact without distortion */
+    transition: transform 0.4s ease;
+}
+
+/* Hover Actions for Interaction */
+.category-item:hover .cat-circle {
+    transform: translateY(-6px);
+    /* Card lifts up slightly */
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.2);
+    border-color: #6366f1;
+    /* Border highlights in light purple */
+}
+
+.category-item:hover .cat-circle img {
+    transform: scale(1.1);
+    /* Gentle zoom inside the image */
+}
+
+/* Headings under the circles */
+.category-item h3 {
+    font-size: 1.05rem;
+    color: #1e1b4b;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Shop Now Text Link with Arrow */
+.btn-shop-now {
+    font-size: 0.85rem;
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s;
+}
+
+.btn-shop-now i {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+/* Hover on Shop Now link pushes the arrow forward */
+.category-item:hover .btn-shop-now {
+    color: #4338ca;
+}
+
+.category-item:hover .btn-shop-now i {
+    transform: translateX(5px);
+    /* Smooth horizontal arrow animation */
+}
+
+/* Responsiveness for Medium/Tablet Screen Layouts */
+@media (max-width: 1150px) {
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 cards per row */
+        gap: 20px;
+    }
+}
+
+/* Responsiveness for Small/Mobile Screen Layouts */
+@media (max-width: 650px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards per row on mobile */
+        gap: 15px;
+    }
+
+    .cat-circle {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+/* ....................................................... */
+/* ==========================================================================
+   WOMEN'S COLLECTION PAGE STYLING
+   ========================================================================== */
+
+/* الحاوي الرئيسي لصفحة المنتجات */
+.products-page-container {
+    padding: 140px 8% 80px 8%;
+    background-color: #cddeec;
+    min-height: 100vh;
+}
+
+/* عنوان وتفاصيل رأس الصفحة */
+.page-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-title h2 {
+    font-size: 2.4rem;
+    color: #1e1b4b;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.page-title p {
+    color: #64748b;
+    font-size: 1rem;
+    margin-top: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* شبكة عرض المنتجات المتجاوبة (Grid) */
+.products-grid {
+    display: grid;
+    /* توزيع تلقائي مرن للكروت: يضمن أن الكارد لا يقل عرضه عن 260px ويتمدد حسب الشاشة */
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+/* بطاقة المنتج الفردية (Product Card) */
+/* بطاقة المنتج الفردية (Product Card) في الوضع الطبيعي */
+.product-card {
+    background-color: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    border: 3px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /* التعديل هنا: إضافة transform لتنعيم حركة التكبير والارتفاع */
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease; 
+}
+
+/* التعديل السحري: عند تمرير الماوس (Hover) على الكارد بالكامل */
+.product-card:hover {
+    border-color: #0ea5e9 !important; /* البوردر الأزرق الصغير */
+    
+    /* 1. التكبير والارتفاع: يكبر الكارد بنسبة 3% ويرتفع قليلاً للأعلى بسلاسة */
+    transform: scale(1.03) translateY(-5px); 
+    
+    /* 2. الظل الخلفي الفخم: ظل أزرق ناعم وعريض يمنح الكارد عمقاً ثلاثي الأبعاد واحترافي */
+    box-shadow: 0 20px 35px rgba(14, 165, 233, 0.18) !important; 
+}
+
+
+
+
+
+
+
+/* الصندوق المخصص للصورة */
+.prod-img-box {
+    width: 100%;
+    height: 300px;
+    background-color: #f8fafc;
+    overflow: hidden;
+    position: relative;
+}
+
+/* تأثير الصورة وصناعة زووم ناعم جداً عند الـ Hover */
+.prod-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* لقص الصورة بشكل متناسق ليملأ المساحة بالكامل */
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .prod-img-box img {
+    transform: scale(1.06);
+}
+
+/* منطقة تفاصيل المنتج والمعلومات أسفل الصورة */
+.prod-info {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* تاغ تصنيف المنتج فوق العنوان (مثل: Shirts, Pants) */
+.prod-category {
+    font-size: 0.75rem;
+    color: #6366f1;
+    /* اللون البنفسجي المميز للموقع */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+/* عنوان المنتج الرئيسي */
+.prod-title {
+    font-size: 1.05rem;
+    color: #1e1b4b;
+    font-weight: 600;
+    margin-bottom: 10px;
+    /* لتوحيد الارتفاع في حال وجود عناوين طويلة أو قصيرة للحفاظ على محاذاة الكروت */
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: normal;
+     overflow: visible;
+     min-height: 54px;
+     display: flex;
+    align-items: center;
+         transition: all 0.3s ease;
+}
+
+
+
+/* عند تمرير الماوس: يظهر الاسم كاملاً وينزل لأسفل بسلاسة */
+.product-item:hover .product-title {
+    white-space: normal;
+    overflow: visible;
+}
+
+
+/* فقرة وصف المنتج التسويقي القصير */
+.prod-description {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    height: 40px;
+    /* لتثبيت الارتفاع على سطرين تماماً كالمواقع الاحترافية */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+/* شريط السعر وزر الشراء السفلي */
+.prod-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    /* دفع هذا الصف لأسفل الكارد دائماً */
+    border-top: 1px solid #f1f5f9;
+    padding-top: 15px;
+}
+
+/* خط السعر */
+.prod-price-row .price {
+    font-size: 1.2rem;
+    color: #1e1b4b;
+    font-weight: 700;
+}
+
+/* زر الشراء والتفاعل الخاص به Buy Now */
+.btn-add-cart {
+    background-color: #6366f1;
+    color: #ffffff;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.15);
+}
+
+.btn-add-cart:hover {
+    background-color: #4338ca;
+    box-shadow: 0 6px 15px rgba(67, 56, 202, 0.25);
+    transform: translateY(-1px);
+}
+
+.btn-add-cart i {
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   RESPONSIVENESS FOR TABLETS & MOBILES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .products-page-container {
+        padding: 120px 5% 60px 5%;
+    }
+
+    .page-title h2 {
+        font-size: 2rem;
+    }
+
+    .prod-img-box {
+        height: 260px;
+    }
+}
+/* ................................................................. */
+/* تنسيق قسم الأكثر مبيعاً */
+.best-sellers-section {
+    padding: 60px 8%;
+    background-color: #ffffff;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.view-all-link {
+    color: #4338ca;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.view-all-link:hover {
+    color: #0ea5e9;
+}
+
+/* تصميم بوكس الصورة لتثبيت أيقونة القلب في الزاوية */
+.prod-img-box {
+    position: relative; /* ضروري لتحديد موقع القلب بالنسبة للكارد */
+}
+
+/* أيقونة القلب المفضلة */
+.btn-wishlist {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cbd5e1; /* لون رمادي في الوضع الطبيعي */
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.btn-wishlist:hover {
+    transform: scale(1.1);
+    color: #ef4444; /* يتحول للأحمر عند تمرير الماوس */
+}
+
+/* كلاس يتم إضافته بالجافاسكريبت عندما يضغط المستخدم على القلب ليثبت اللون الأحمر */
+.btn-wishlist.active {
+    color: #ef4444 !important;
+}
+
+
+
+
+
+
+
+
+
+/* تحويل الصندوق الدائري إلى مستطيل كامل الحواف */
+.rect-box {
+    width: 100% !important;
+    height: 280px !important; /* طول مستطيل فخم وممتاز يعرض المنتجات بوضوح */
+    border-radius: 12px 12px 0 0 !important; /* تدوير الحواف العلوية فقط للمستطيل */
+    overflow: hidden;
+    position: relative;
+}
+
+.rect-box img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* لتملأ الصورة كامل المستطيل بشكل متناسق */
+}
+
+/* تنسيق شريط السعر والزر داخل الكارد */
+.prod-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.price {
+    font-weight: 800;
+    color: #0f172a;
+    font-size: 1.2rem;
+}
+
+/* زر الشراء الفخم ليتماشى مع الكود الثابت */
+.prod-price-row .btn-add-cart {
+    background-color: #6366f1;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: background 0.3s ease;
+}
+
+.prod-price-row .btn-add-cart:hover {
+    background-color: #4338ca;
+}
+.btn-add-cart {
+    border: none;
+    cursor: pointer;
+    font-family: inherit; /* ليرث خط المتجر الفخم */
+}
+/* ==========================================================================
+   قسم التجاوب والميديا لشبكة المنتجات (Responsive Media Queries)
+   ========================================================================== */
+
+/* 1. الشاشات المتوسطة (الأجهزة اللوحية / Tablets - أقل من 1024 بكسل) */
+@media screen and (max-width: 1024px) {
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important; /* عرض كارتين في كل سطر بدلاً من 4 */
+        gap: 20px !important;
+    }
+    
+    .best-sellers-section, .products-page-container {
+        padding: 40px 5% !important; /* تقليل المسافات الجانبية لتوفير مساحة للكروت */
+    }
+
+    .premium-title-box {
+        margin-top: 100px !important; /* رفع العنوان قليلاً ليناسب الشاشات الأصغر */
+    }
+}
+/* الكود الذكي لتوسيط الكروت ومنع حدوث الفراغات الجانبية المزعجة */
+.products-grid {
+    display: grid !important;
+    /* السحر هنا: يتكيف تلقائياً مع حجم الشاشة ويحدد أقل عرض للكارد 260px ويملأ المساحة */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important; 
+    gap: 30px !important;
+    width: 100% !important;
+    
+    /* هذا التعديل الأهم: يقوم بتوسيط الكروت الزائدة في السطر الأخير تماماً لتبدو متناسقة */
+    justify-content: center !important; 
+    justify-items: center !important;
+}
+
+/* تعديل بسيط للكارد لضمان ثبات عرضه ومنعه من التمدد بشكل مفرط */
+.product-card {
+    width: 100% !important;
+    max-width: 320px !important; /* يحمي الكارد من أن يصبح عريضاً جداً في المساحات الفارغة */
+}
+
+
+/* 2. الشاشات الصغيرة (الهواتف الذكية / Smartphones - أقل من 600 بكسل) */
+@media screen and (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: repeat(1, 1fr) !important; /* عرض كارت واحد كامل العرض في السطر لراحة العين */
+        gap: 25px !important;
+    }
+    
+    .best-sellers-section, .products-page-container {
+        padding: 30px 4% !important;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem !important; /* تصغير حجم العنوان ليناسب شاشة الهاتف */
+    }
+
+    .premium-title-box h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .rect-box {
+        height: 240px !important; /* تقليل طول مستطيل الصورة قليلاً على الهواتف لعدم استهلاك مساحة الشاشة */
+    }
+    
+    /* تصغير طفيف للخطوط والزرار داخل الكارد على الموبايل ليظهر بشكل كلاس وواو */
+    .prod-title {
+        font-size: 0.95rem !important;
+    }
+    
+    .prod-price-row .price {
+        font-size: 1.1rem !important;
+    }
+}
+/* ووووووووووووووووووووووووووووووووووووووووووووووو */
+/* تنسيق قسم العروض */
+.offers-section {
+    padding: 40px 8%;
+    background-color: #ffffff;
+}
+
+.offers-container {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.offer-banner {
+    flex: 1;
+    border-radius: 16px;
+    padding: 35px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+}
+
+/* بنر الخصم الأيسر (أرجواني ناعم) */
+.discount-banner {
+    background: linear-gradient(135deg, #ede9fe 0%, #fae8ff 100%);
+}
+
+/* بنر المؤقت الأيمن (وردي ناعم) */
+.countdown-banner {
+    background: linear-gradient(135deg, #ffe4e6 0%, #ffedd5 100%);
+}
+
+/* نصوص العروض */
+.offer-text {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.offer-badge-text { color: #4338ca; font-weight: 700; font-size: 0.95rem; }
+.deal-badge-text { color: #be123c; font-weight: 700; font-size: 1.1rem; }
+.hurry-text { color: #475569; font-size: 0.9rem; margin-top: 4px; }
+
+.offer-text h2 {
+    font-size: 2.3rem;
+    color: #1e1b4b;
+    font-weight: 800;
+    margin: 8px 0 4px 0;
+}
+
+.offer-text p {
+    color: #1e1b4b;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* صندوق الكوبون الأبيض */
+.coupon-box {
+    display: flex;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: max-content;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.coupon-label { padding: 10px 14px; font-size: 0.85rem; font-weight: 700; color: #64748b; background: #f8fafc; }
+.coupon-code { padding: 10px 20px; font-size: 0.9rem; font-weight: 800; color: #0f172a; letter-spacing: 1px; }
+
+/* مؤقت الساعة التفاعلي */
+.countdown-timer {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.timer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    min-width: 55px;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.timer-box span { font-size: 1.3rem; font-weight: 800; color: #0f172a; }
+.timer-box label { font-size: 0.65rem; font-weight: 700; color: #64748b; margin-top: 2px; }
+
+/* زر الشراء الوردي */
+.btn-shop-deal {
+    background-color: #db2777;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    width: max-content;
+    transition: background 0.3s ease;
+}
+
+.btn-shop-deal:hover { background-color: #be123c; }
+
+/* صور البنرات */
+.offer-image {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ==========================================
+   الميديا كويري لضمان التجاوب على الموبايل
+   ========================================== */
+@media screen and (max-width: 900px) {
+    .offers-container {
+        flex-direction: column; /* تحويل البنرات لتصبح تحت بعضها على الشاشات الصغيرة */
+        gap: 20px;
+    }
+    .offer-banner {
+        height: auto;
+        padding: 30px;
+    }
+}
+/* زززززززززززززززززززززززززززززززززززززززززززززززززززززززز */
+/* ==========================================================================
+   تنسيق قسم آراء العملاء (Testimonials Section)
+   ========================================================================== */
+/* الكارد المطور: تدرج أزرق سماوي مضيء ومنعش */
+/* ==========================================================================
+   قسم آراء العملاء المتكامل (العناوين + الكروت الزرقاء المضيئة)
+   ========================================================================== */
+
+/* الحاوية الرئيسية للقسم */
+.testimonials-section {
+    padding: 80px 8% !important;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    text-align: center !important;
+}
+
+/* تنسيق الجزء العلوي الذي يحتوي على العناوين */
+.testimonials-header {
+    margin-bottom: 50px !important;
+    text-align: center !important;
+}
+
+/* البادج الأزرق الصغير فوق العنوان */
+.testimonials-badge {
+    background-color: #e0f2fe !important;
+    color: #0369a1 !important;
+    padding: 6px 16px !important;
+    border-radius: 50px !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    display: inline-block !important;
+    margin-bottom: 15px !important;
+    text-transform: uppercase !important;
+}
+
+/* العنوان الرئيسي الكبير الفخم */
+.testimonials-header h2 {
+    font-size: 2.4rem !important;
+    color: #0f172a !important;
+    font-weight: 800 !important;
+    margin: 0 !important;
+}
+
+/* النص الفرعي أسفل العنوان */
+.testimonials-header p {
+    color: #64748b !important;
+    font-size: 1.1rem !important;
+    margin-top: 10px !important;
+}
+
+/* شبكة التوزيع الأساسية للكروت */
+.testimonials-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 30px !important;
+    width: 100% !important;
+    justify-content: center !important;
+}
+
+/* الكارد المطور: تدرج أزرق سماوي ناعم ومشرق */
+.testimonial-card {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%) !important; 
+    border: 1px solid #bae6fd !important; 
+    border-radius: 16px !important;
+    padding: 35px !important;
+    text-align: left !important;
+    position: relative !important;
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.03) !important; 
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+/* حركة الـ Hover الإبداعية للكارد */
+.testimonial-card:hover {
+    transform: scale(1.02) translateY(-5px) !important;
+    border-color: #0ea5e9 !important; 
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%) !important; 
+    box-shadow: 0 20px 35px rgba(14, 165, 233, 0.15) !important; 
+}
+
+/* أيقونة الاقتباس بالخلفية */
+.quote-icon {
+    position: absolute !important;
+    top: 25px !important;
+    right: 30px !important;
+    font-size: 2rem !important;
+    color: #7dd3fc !important; 
+    opacity: 0.4 !important;
+}
+
+/* نص رأي العميل */
+.testimonial-text {
+    color: #0369a1 !important; 
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 25px !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+}
+
+/* خط الفصل السفلي */
+.customer-info {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    border-top: 1px solid #bae6fd !important; 
+    padding-top: 15px !important;
+}
+
+/* إطار الصورة الشخصية */
+.customer-avatar {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    border: 2px solid #0ea5e9 !important; 
+}
+
+.customer-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.customer-details h4 {
+    font-size: 1rem !important;
+    color: #0c4a6e !important; 
+    font-weight: 700 !important;
+    margin: 0 !important;
+}
+
+.customer-details span {
+    font-size: 0.75rem !important;
+    color: #059669 !important; 
+    font-weight: 700 !important;
+}
+
+/* ميديا كويري للشاشات الصغيرة */
+@media screen and (max-width: 480px) {
+    .testimonial-card {
+        padding: 25px !important;
+    }
+    .testimonials-header h2 {
+        font-size: 1.8rem !important;
+    }
+}
+/* ززززززززززززززززززززززززززززززز */
+/* ==========================================================================
+   تنسيق قسم النشرة البريدية الختامي (Newsletter Section)
+   ========================================================================== */
+.newsletter-section {
+    padding: 40px 8% 80px 8% !important; /* مسافة بصرية مريحة تمهد للفوتر */
+    background-color: #f8fafc !important;
+}
+
+/* البنر العريض: تدرج أزرق ملكي غني ومشرق جداً */
+.newsletter-banner {
+    background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%) !important;
+    border-radius: 20px !important;
+    padding: 50px 60px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15) !important;
+    gap: 40px !important;
+}
+
+.newsletter-content {
+    flex: 1 !important;
+    text-align: left !important;
+}
+
+.newsletter-badge-text {
+    color: #e0f2fe !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    display: inline-block !important;
+    margin-bottom: 12px !important;
+}
+
+.newsletter-content h2 {
+    color: #ffffff !important;
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    margin: 0 0 10px 0 !important;
+}
+
+.newsletter-content p {
+    color: #f0f9ff !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    max-width: 500px !important;
+}
+
+/* محرك النموذج والصندوق */
+.newsletter-form {
+    flex: 1 !important;
+    display: flex !important;
+    gap: 15px !important;
+    width: 100% !important;
+    max-width: 520px !important;
+}
+
+.input-group {
+    position: relative !important;
+    flex: 1 !important;
+}
+
+/* أيقونة مغلف البريد داخل صندوق الإدخال */
+.input-icon {
+    position: absolute !important;
+    top: 50% !important;
+    left: 18px !important;
+    transform: translateY(-50%) !important;
+    color: #94a3b8 !important;
+    font-size: 1.1rem !important;
+}
+
+.newsletter-input {
+    width: 100% !important;
+    padding: 16px 16px 16px 48px !important; /* مسافة لليسار لكي لا يغطى النص فوق الأيقونة */
+    border: none !important;
+    border-radius: 12px !important;
+    font-size: 0.95rem !important;
+    color: #0f172a !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+    outline: none !important;
+    font-family: inherit !important;
+}
+
+.newsletter-input::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* زر الاشتراك الأبيض الكلاس الفخم */
+.btn-subscribe {
+    background-color: #0f172a !important; /* لون داكن ملكي يعطي تباين رائع مع الأزرق */
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 16px 28px !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    transition: all 0.3s ease !important;
+    white-space: nowrap !important;
+    font-family: inherit !important;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2) !important;
+}
+
+.btn-subscribe:hover {
+    background-color: #ffffff !important;
+    color: #2563eb !important; /* ينعكس اللون للأزرق عند التمرير */
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25) !important;
+}
+
+/* ==========================================
+   الميديا كويري لضمان التجاوب الكامل على الموبايل والتابلت
+   ========================================== */
+@media screen and (max-width: 992px) {
+    .newsletter-banner {
+        flex-direction: column !important; /* تحويل العناصر تحت بعضها طردياً للراحة البصرية */
+        padding: 40px 35px !important;
+        gap: 25px !important;
+    }
+    .newsletter-content {
+        text-align: center !important;
+    }
+    .newsletter-content p {
+        margin: 0 auto !important;
+    }
+    .newsletter-form {
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .newsletter-form {
+        flex-direction: column !important; /* يظهر البوكس والزر فوق بعضهما على الهواتف الضيقة */
+        gap: 12px !important;
+    }
+    .btn-subscribe {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    .newsletter-content h2 {
+        font-size: 1.8rem !important;
+    }
+}
+/* ززززززززززززززززززززززززززززززززز */
+/* ==========================================================================
+   تنسيق تذييل الصفحة الفخم (Premium Footer Section)
+   ========================================================================== */
+.main-footer {
+    background-color: #0f172a !important; /* لون كحلي داكن ملكي يعطي عمقاً للتصميم */
+    color: #94a3b8 !important; /* لون خط رمادي ناعم مريح للعين */
+    padding: 70px 8% 20px 8% !important;
+    font-family: inherit !important;
+}
+
+.footer-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 40px !important;
+    width: 100% !important;
+    border-bottom: 1px solid #334155 !important; /* خط تقسيم سفلي ناعم */
+    padding-bottom: 50px !important;
+}
+
+.footer-column {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: left !important; /* متناسق مع اتجاه متجرك */
+}
+
+/* عناوين الأعمدة */
+.footer-column h3 {
+    color: #ffffff !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 25px 0 !important;
+    position: relative !important;
+}
+
+/* وضع خط أزرق صغير تحت العناوين لمطابقة الهوية */
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 35px;
+    height: 2.5px;
+    background-color: #0ea5e9;
+    border-radius: 2px;
+}
+
+/* تنسيق اللوجو في الفوتر */
+.footer-logo a {
+    font-size: 1.6rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    margin-bottom: 15px !important;
+}
+
+.footer-logo i {
+    color: #0ea5e9 !important; /* شنطة اللوجو باللون الأزرق المشرق */
+}
+
+.brand-desc {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+}
+
+/* أزرار السوشيال ميديا الدائرية التفاعلية */
+.footer-socials {
+    display: flex !important;
+    gap: 12px !important;
+}
+
+.footer-socials a {
+    width: 38px !important;
+    height: 38px !important;
+    background-color: #1e293b !important;
+    color: #cbd5e1 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.footer-socials a:hover {
+    background-color: #0ea5e9 !important; /* تتحول للأزرق الحيوي عند التمرير */
+    color: #ffffff !important;
+    transform: translateY(-3px) !important;
+}
+
+/* روابط الأعمدة وقائمة التمرير */
+.footer-links {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.footer-links li {
+    margin-bottom: 12px !important;
+}
+
+.footer-links a {
+    color: #94a3b8 !important;
+    text-decoration: none !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    transition: all 0.25s ease !important;
+}
+
+/* تأثير انزلاق وتلوين الرابط للأزرق عند الـ Hover */
+.footer-links a:hover {
+    color: #0ea5e9 !important;
+    padding-left: 6px !important; /* حركة إزاحة ناعمة جداً وكلاس */
+}
+
+/* قائمة بيانات التواصل */
+.contact-info-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.contact-info-list li {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    margin-bottom: 15px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+}
+
+.contact-info-list li i {
+    color: #0ea5e9 !important; /* تلوين أيقونات التواصل بالأزرق */
+    font-size: 1.05rem !important;
+    margin-top: 3px !important;
+}
+
+/* الشريط السفلي النهائي للحقوق */
+.footer-bottom {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding-top: 25px !important;
+    font-size: 0.85rem !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+}
+
+.footer-bottom p {
+    margin: 0 !important;
+}
+
+/* أيقونات الدفع الفيزا والماستر */
+.payment-icons {
+    display: flex !important;
+    gap: 15px !important;
+    font-size: 1.5rem !important;
+    color: #64748b !important;
+}
+
+.payment-icons i:hover {
+    color: #ffffff !important; /* تضيء الأيقونات بالأبيض عند التمرير عليها */
+    transition: color 0.3s ease;
+}
+
+/* ميديا كويري للشاشات الصغيرة والموبايل */
+@media screen and (max-width: 768px) {
+    .main-footer {
+        padding: 50px 5% 20px 5% !important;
+    }
+    .footer-container {
+        gap: 30px !important;
+        padding-bottom: 35px !important;
+    }
+    .footer-bottom {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+}

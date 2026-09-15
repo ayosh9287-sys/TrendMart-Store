@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendMart | Best Sellers Collection</title>
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .premium-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: linear-gradient(45deg, #ef4444, #f97316);
+            color: white;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 6px;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(239, 68, 68, 0.25);
+        }
+        
+        .premium-title-box {
+            margin-top: 140px !important; 
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .btn-wishlist.active {
+            color: #ef4444 !important;
+        }
+    </style>
+</head>
+<body>
+
+   <header class="navbar">
+    <div class="logo">
+        <a href="index.html" style="text-decoration: none; color: #4338ca;"><i class="fa fa-shopping-bag"></i> TrendMart</a>
+    </div>
+    
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="women.html">Women</a>
+        <a href="men.html">Men</a>
+        <a href="sunglasses.html">Sunglasses</a>
+        <a href="perfumes.html">Perfumes</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="bags.html">Bags</a>
+    </nav>
+
+    <div class="auth-buttons">
+        <a href="cart.html" class="btn-login" style="position: relative; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fa fa-shopping-cart"></i> Cart 
+            <span id="cartCount" style="background-color: #ef4444; color: white; padding: 2px 7px; border-radius: 50%; font-size: 0.75rem; font-weight: 700; position: absolute; top: -12px; right: -8px; box-shadow: 0 2px 5px rgba(239, 68, 68, 0.3);">0</span>
+        </a>
+    </div>
+</header>
+
+    <main class="products-page-container">
+        <div class="premium-title-box">
+            <h2 style="font-size: 2.5rem; color: #0f172a; font-weight: 800;">Our Top 10 Best Sellers 🔥</h2>
+            <p style="color: #64748b; font-size: 1.1rem; margin-top: 10px;">Handpicked trending items with limited-time premium offers.</p>
+        </div>
+
+        <div class="products-grid" id="allBestSellersContainer"></div>
+    </main>
+
+    <script src="java/products.js"></script>
+    <script>
+       var bestSellersProducts = [
+    { id: 101, name: "Premium Leather Handbag", type: "Bags", price: 59.99, oldPrice: 89.99, rating: 5, reviews: 245, img: "imgs/photo_2026-09-09_21-12-47.jpg" },
+    { id: 102, name: "Classic White Sneakers", type: "Men", price: 49.99, oldPrice: 69.99, rating: 4, reviews: 512, img: "imgs/photo_2026-09-07_14-52-29.jpg" },
+    { id: 103, name: "Smart Watch Pro Series", type: "Accessories", price: 89.99, oldPrice: 129.99, rating: 5, reviews: 321, img: "imgs/photo_2026-09-09_21-03-47.jpg" },
+    { id: 104, name: "Luxury Eau De Parfum", type: "Perfumes", price: 39.99, oldPrice: 59.99, rating: 4, reviews: 187, img: "imgs/photo_2026-09-09_20-54-17.jpg"},
+    { id: 105, name: "Vintage Aviator Sunglasses", type: "Sunglasses", price: 24.99, oldPrice: 39.99, rating: 5, reviews: 94, img: "imgs/photo_2026-09-09_20-43-23.jpg" },
+    { id: 106, name: "Casual Denim Jacket", type: "Men", price: 65.00, oldPrice: 85.00, rating: 4, reviews: 143, img: "imgs/photo_2026-09-09_20-19-51.jpg" },
+    { id: 107, name: "Boho Summer Dress", type: "Women", price: 44.99, oldPrice: 55.00, rating: 5, reviews: 210, img: "imgs/photo_2026-09-09_13-50-40.jpg" },
+    { id: 108, name: "Minimalist Gold Necklace", type: "Accessories", price: 19.99, oldPrice: 29.99, rating: 4, reviews: 88, img: "imgs/photo_2026-09-09_21-04-09.jpg" },
+    { id: 109, name: "Luxury Soft Lambskin Hobo Bag", type: "Women", price: 29.99, oldPrice: 45.00, rating: 5, reviews: 302, img: "imgs/photo_2026-09-09_21-12-50.jpg" },
+    { id: 110, name: "Waterproof Travel Backpack", type: "Bags", price: 49.99, oldPrice: 75.00, rating: 4, reviews: 115, img: "imgs/photo_2026-09-09_21-11-35.jpg" }
+];
+        function generatePageStars(rating) {
+            let starsHtml = "";
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    starsHtml += `<i class="fa fa-star" style="color: #f59e0b;"></i>`;
+                } else {
+                    starsHtml += `<i class="fa fa-star-o" style="color: #cbd5e1;"></i>`;
+                }
+            }
+            return starsHtml;
+        }
+
+        function renderAllBestSellers() {
+            var container = document.getElementById("allBestSellersContainer");
+            if (!container) return;
+            
+            var htmlContent = "";
+            for (var i = 0; i < bestSellersProducts.length; i++) {
+                var product = bestSellersProducts[i];
+                var wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+                var isFavorite = wishlist.includes(product.id) ? "active" : "";
+                var discount = Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100);
+
+                htmlContent += `
+                    <div class="product-card">
+                        <div class="prod-img-box">
+                            <span class="premium-badge">SAVE ${discount}%</span>
+                            <button type="button" class="btn-wishlist ${isFavorite}" onclick="toggleWishlist(event, ${product.id})">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                            <img src="${product.img}" alt="${product.name}">
+                        </div>
+                        <div class="prod-info">
+                            <span class="prod-category">${product.type}</span>
+                            <h3 class="prod-title">${product.name}</h3>
+                            
+                            <div class="prod-rating" style="margin: 8px 0; font-size: 0.85rem;">
+                                ${generatePageStars(product.rating)}
+                                <span style="color: #64748b; margin-left: 5px;">(${product.reviews})</span>
+                            </div>
+
+                            <div class="prod-price-row">
+                                <div style="display: flex; flex-direction: column;">
+                                    <span class="price" style="font-weight: 800; color: #0f172a; font-size: 1.2rem;">$${product.price.toFixed(2)}</span>
+                                    <span class="old-price" style="text-decoration: line-through; color: #94a3b8; font-size: 0.9rem;">$${product.oldPrice.toFixed(2)}</span>
+                                </div>
+                                <button type="button" class="btn-add-cart" onclick="addToCartAndGo(${product.id})">
+                                    <i class="fa fa-shopping-cart"></i> Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            container.innerHTML = htmlContent;
+        }
+
+function addToCartAndGo(productId) {
+    var currentCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+    
+    var selectedProduct = bestSellersProducts.find(function(p) {
+        return p.id === productId;
+    });
+    
+    if (selectedProduct) {
+        var cartItem = {
+            id: selectedProduct.id,
+            name: selectedProduct.name,
+            title: selectedProduct.name,  
+            price: selectedProduct.price,
+            type: selectedProduct.type,
+            img: selectedProduct.img,     
+            image: selectedProduct.img    
+        };
+        
+        currentCart.push(cartItem);
+        localStorage.setItem("shoppingCart", JSON.stringify(currentCart));
+        
+        var countSpan = document.getElementById("cartCount");
+        if (countSpan) {
+            countSpan.textContent = currentCart.length;
+        }
+        
+    }
+}
+
+function toggleWishlist(event, productId) {
+    event.stopPropagation();
+    var button = event.currentTarget;
+    var wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    if (wishlist.includes(productId)) {
+        wishlist = wishlist.filter(function(id) { return id !== productId; });
+        button.classList.remove("active");
+    } else {
+        wishlist.push(productId);
+        button.classList.add("active");
+    }
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    renderAllBestSellers();
+    
+    var currentCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+    var countSpan = document.getElementById("cartCount");
+    if (countSpan) {
+        countSpan.textContent = currentCart.length;
+    }
+});
+
+
+
+
+        function toggleWishlist(event, productId) {
+            event.stopPropagation();
+            var button = event.currentTarget;
+            var wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+            if (wishlist.includes(productId)) {
+                wishlist = wishlist.filter(id => id !== productId);
+                button.classList.remove("active");
+            } else {
+                wishlist.push(productId);
+                button.classList.add("active");
+            }
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            renderAllBestSellers();
+            if (typeof updateCartCount === 'function') updateCartCount();
+        });
+    </script>
+</body>
+</html>

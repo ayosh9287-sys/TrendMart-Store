@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendMart | Bags Collection</title>
+    <!-- حماية الصفحة بالجافا سكريبت من التصفح دون تسجيل دخول -->
+    <script src="js/auth-check.js"></script>
+    <!-- ربط ملف الـ CSS الموحد وملف الأيقونات المعتمد -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+
+<body>
+
+    <!-- شريط التنقل العلوي الموحد الكامل -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: #4338ca;"><i class="fa fa-shopping-bag"></i>
+                TrendMart</a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="women.html">Women</a>
+            <a href="men.html">Men</a>
+            <a href="sunglasses.html">Sunglasses</a>
+            <a href="perfumes.html">Perfumes</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="bags.html" class="active">Bags</a>
+        </nav>
+
+        <div class="auth-buttons" style="display: flex; align-items: center; gap: 15px;">
+            <a href="cart.html" class="btn-login"
+                style="position: relative; display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fa fa-shopping-cart"></i> Cart
+                <span id="cartCount"
+                    style="background-color: #ef4444; color: white; padding: 2px 7px; border-radius: 50%; font-size: 0.75rem; font-weight: 700; position: absolute; top: -12px; right: -8px; box-shadow: 0 2px 5px rgba(239, 68, 68, 0.3);">0</span>
+            </a>
+            <a href="index.html" class="btn-logout"
+                style="background-color: transparent; border: 1px solid #6366f1; color: #6366f1; text-decoration: none; padding: 8px 18px; border-radius: 8px; font-weight: 600;"><i
+                    class="fa fa-arrow-left"></i> Home</a>
+        </div>
+    </header>
+
+    <main class="products-page-container">
+        <div class="page-title">
+            <h2>Luxury Bags Collection</h2>
+            <p>Discover 20 elegant leather handbags, designer backpacks, crossbodies, and premium travel luggage.</p>
+        </div>
+
+        <div id="bagsProductsContainer" class="products-grid"></div>
+    </main>
+
+    <script src="java/products.js"></script>
+</body>
+
+</html>
